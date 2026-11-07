@@ -19,6 +19,7 @@ ul {
 }
 
 a {
+    color:#84A98C;
     text-decoration: none;
 }
 
@@ -29,8 +30,6 @@ a button {
     border-color: #19241b;
     padding: 12px;
 }
-
-
 
 a button:hover {
     color: #f01763;
