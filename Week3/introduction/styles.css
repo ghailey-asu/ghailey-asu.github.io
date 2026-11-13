@@ -1,0 +1,157 @@
+/*
+Redaction 50: CSS classes
+.redaction-50-regular {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-50-bold {
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-50-regular-italic {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+Tiny5 Duo: CSS class for a variable style
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+.tiny5-duo-<uniquifier> {
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "BLED" 0,
+    "JITT" 0,
+    "ROND" 0;
+}
+*/
+
+* {
+    --dark-amethyst:    #320e3bff;
+    --sweet-peony:      #e56399ff;
+    --wisteria-blue:    #7f96ffff;
+    --light-blue:       #a6cfd5ff;
+    --light-cyan:       #dbfcffff;
+    color: #320e3bff;
+    font-family: "Tiny5 Duo", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+  background-color: #320e3bff;
+  background-image: url('./assets/background.png');
+  margin: 150px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.content {
+  background-color: #dbfcffff;
+  border: 20px fade var(--dark-amethyst);
+  padding: 100px;
+  border-radius: 100px
+}
+
+header {
+  font-size: 100px;
+  color: #320e3bff;
+  margin-bottom: 16px;
+  text-transform: uppercase; 
+  text-shadow: 8px 5px 0px var(--sweet-peony);
+  font-weight: 360;
+}
+
+.intro {
+  text-align: center;
+}
+
+/* How to style hr element: https://www.w3schools.com/howto/howto_css_style_hr.asp */
+hr {
+  border-left: hidden;
+  border-top: 6px dotted #a6cfd5ff;
+  border-bottom: hidden;
+}
+
+h2 {
+  text-shadow: 2px 2px 0px var(--wisteria-blue);
+}
+
+p {
+  color: #320e3bff;
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 22px; 
+}
+
+.cards {
+  display: flex;
+}
+
+/* Using :has Pseudo class to select divs that contain an imgage: https://www.w3schools.com/cssref/sel_has.php */
+.cards:has(img) {
+  display: block;
+}
+
+.cards div {
+  background-color: var(--light-blue);
+  padding: 16px; 
+  border: 5px solid var(--dark-amethyst);
+  border-radius: 5px;
+  align-items: center;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  margin-bottom: 24px; 
+  transition: all 800ms; 
+}
+
+.cards div:hover {
+  box-shadow: 10px 10px var(--sweet-peony)
+}
+
+.cards .obsessed:hover {
+  background-color: #8AD0A9;
+  border: 5px solid #173A27;
+}
+
+.obsessed:hover h3 {
+  color: #173A27;
+}
+
+.obsessed:hover p {
+  color: #173A27;
+}
+
+/* Using child combinator: https://www.w3schools.com/css/css_combinators.asp */
+.cards div > img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+footer h1 {
+  font-size: 36px;
+  color: #dbfcffff;
+  text-transform: uppercase; 
+  text-shadow: 8px 5px 0px var(--dark-amethyst);
+}
+
+footer h3 {
+  font-size: 24px;
+  color: #a6cfd5ff;
+  text-shadow: 2px 2px 0px var(--light-cyan);
+}
